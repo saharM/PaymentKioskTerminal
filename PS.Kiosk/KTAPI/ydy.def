@@ -1,0 +1,26 @@
+LIBRARY "KTAPI"
+EXPORTS
+Pinpad_Return_All
+Byte_One_Two
+Byte_Two_One
+PinPad_EnablePort
+PinPad_DisablePort
+PinPad_ReadEndNo
+PinPad_WriteEndNo
+PinPad_InitKey
+PinPad_DownloadMKey
+PinPad_DownloadEncryWKey
+PinPad_DownloadEncryplainWKey
+PinPad_ActiveWKey
+PinPad_StartEPP
+PinPad_SetBeep
+PinPad_SetParameters
+PinPad_ReadOneByte
+PinPad_MakeMac
+PinPad_RChar
+PinPad_ReadPin
+PinPad_DownloadCNo
+PinPad_EncryData
+PinPad_DecryData
+PinPad_ExitEPP
+TDES_FUN

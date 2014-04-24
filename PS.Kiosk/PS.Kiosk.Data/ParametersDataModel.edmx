@@ -1,0 +1,332 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="KioskDataModel.Store" Alias="Self" Provider="System.Data.SqlServerCe.3.5" ProviderManifestToken="3.5" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="KioskDataModelStoreContainer">
+          <EntitySet Name="tblParameters" EntityType="KioskDataModel.Store.tblParameters" store:Type="Tables" />
+          <EntitySet Name="tblReversalTrans" EntityType="KioskDataModel.Store.tblReversalTrans" store:Type="Tables" />
+          <EntitySet Name="tblSettleReversTrans" EntityType="KioskDataModel.Store.tblSettleReversTrans" store:Type="Tables" />
+          <EntitySet Name="tblSettleTrans" EntityType="KioskDataModel.Store.tblSettleTrans" store:Type="Tables" />
+          <EntitySet Name="tblShetabError" EntityType="KioskDataModel.Store.tblShetabError" store:Type="Tables" />
+          <EntitySet Name="tblTransactions" EntityType="KioskDataModel.Store.tblTransactions" store:Type="Tables" />
+          <EntitySet Name="tblTransactionsReply" EntityType="KioskDataModel.Store.tblTransactionsReply" store:Type="Tables" />
+        </EntityContainer>
+        <EntityType Name="tblParameters">
+          <Key>
+            <PropertyRef Name="ParamKey" />
+          </Key>
+          <Property Name="ParamKey" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="ParamValue" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="tblReversalTrans">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="bigint" Nullable="false" />
+          <Property Name="Stan" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="TranRefNumber" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="CardNumber" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="PrimaryProcessCode" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="PrimaryAmount" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="PrimaryStan" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="PrimaryRefNumber" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="PrimaryDateTime" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="PrimaryNewAmount" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="SendDateTime" Type="datetime" Nullable="false" />
+          <Property Name="IsoTrack" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="PinBlock" Type="binary" MaxLength="100" />
+          <Property Name="IsInTry" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tblSettleReversTrans">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="bigint" Nullable="false" />
+          <Property Name="Stan" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="TranRefNumber" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="CardNumber" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="PrimaryProcessCode" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="PrimaryAmount" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="PrimaryStan" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="PrimaryRefNumber" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="PrimaryDateTime" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="PrimaryNewAmount" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="SendDateTime" Type="datetime" Nullable="false" />
+          <Property Name="IsoTrack" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="IsInTry" Type="bit" Nullable="false" />
+          <Property Name="ServiceType" Type="int" Nullable="false" />
+          <Property Name="PinBlock" Type="binary" Nullable="false" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="tblSettleTrans">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="bigint" Nullable="false" />
+          <Property Name="Stan" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="TranRefNumber" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="SendDateTime" Type="datetime" Nullable="false" />
+          <Property Name="IsInTry" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tblShetabError">
+          <Key>
+            <PropertyRef Name="[ShetabErrorCode]" />
+            <PropertyRef Name="[BankSN]" />
+          </Key>
+          <Property Name="[ShetabErrorCode]" Type="smallint" Nullable="false" />
+          <Property Name="[ShetabErrorDes]" Type="nvarchar" Nullable="false" MaxLength="200" />
+          <Property Name="[BankSN]" Type="smallint" Nullable="false" />
+          <Property Name="[ShetabErrorDesEn]" Type="nvarchar" MaxLength="250" />
+          <Property Name="[ShetabErrorDesFin]" Type="nvarchar" MaxLength="300" />
+        </EntityType>
+        <EntityType Name="tblTransactions">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="bigint" Nullable="false" />
+          <Property Name="Stan" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="RefrenceNumber" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="MessageType" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="SendDateTime" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tblTransactionsReply">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="bigint" Nullable="false" />
+          <Property Name="TranReqID" Type="bigint" Nullable="false" />
+          <Property Name="Stan" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="RefrenceNumber" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="MessageType" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="SendDateTime" Type="datetime" Nullable="false" />
+          <Property Name="ReplyCode" Type="int" Nullable="false" />
+        </EntityType>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="KioskDataModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="KioskDataEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="tblParameters" EntityType="KioskDataModel.tblParameters" />
+          <EntitySet Name="tblShetabError" EntityType="KioskDataModel.tblShetabError" />
+          <EntitySet Name="tblTransactions" EntityType="KioskDataModel.tblTransactions" />
+          <EntitySet Name="tblTransactionsReply" EntityType="KioskDataModel.tblTransactionsReply" />
+          <EntitySet Name="tblReversalTrans" EntityType="KioskDataModel.tblReversalTrans" />
+          <EntitySet Name="tblSettleTrans" EntityType="KioskDataModel.tblSettleTrans" />
+          <EntitySet Name="tblSettleReversTrans" EntityType="KioskDataModel.tblSettleReversTrans" />
+        </EntityContainer>
+        <EntityType Name="tblParameters">
+          <Key>
+            <PropertyRef Name="ParamKey" />
+          </Key>
+          <Property Name="ParamKey" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="ParamValue" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="tblShetabError">
+          <Key>
+            <PropertyRef Name="C_ShetabErrorCode_" />
+            <PropertyRef Name="C_BankSN_" />
+          </Key>
+          <Property Name="C_ShetabErrorCode_" Type="Int16" Nullable="false" />
+          <Property Name="C_ShetabErrorDes_" Type="String" Nullable="false" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="C_BankSN_" Type="Int16" Nullable="false" />
+          <Property Name="C_ShetabErrorDesEn_" Type="String" MaxLength="250" Unicode="true" FixedLength="false" />
+          <Property Name="C_ShetabErrorDesFin_" Type="String" MaxLength="300" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="tblTransactions">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int64" Name="ID" Nullable="false" />
+          <Property Type="String" Name="Stan" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="RefrenceNumber" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MessageType" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Type="DateTime" Name="SendDateTime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tblTransactionsReply">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int64" Name="ID" Nullable="false" />
+          <Property Type="Int64" Name="TranReqID" Nullable="false" />
+          <Property Type="String" Name="Stan" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="RefrenceNumber" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MessageType" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="SendDateTime" Nullable="false" />
+          <Property Type="Int32" Name="ReplyCode" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tblReversalTrans">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int64" Name="ID" Nullable="false" />
+          <Property Type="String" Name="Stan" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="TranRefNumber" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CardNumber" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PrimaryProcessCode" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PrimaryAmount" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PrimaryStan" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PrimaryRefNumber" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PrimaryDateTime" Nullable="false" />
+          <Property Type="String" Name="PrimaryNewAmount" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="SendDateTime" Nullable="false" />
+          <Property Type="String" Name="IsoTrack" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Type="Binary" Name="PinBlock" MaxLength="100" FixedLength="true" />
+          <Property Type="Boolean" Name="IsInTry" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tblSettleTrans">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int64" Name="ID" Nullable="false" />
+          <Property Type="String" Name="Stan" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="TranRefNumber" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="SendDateTime" Nullable="false" />
+          <Property Type="Boolean" Name="IsInTry" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tblSettleReversTrans">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int64" Name="ID" Nullable="false" />
+          <Property Type="String" Name="Stan" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="TranRefNumber" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CardNumber" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PrimaryProcessCode" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PrimaryAmount" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PrimaryStan" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PrimaryRefNumber" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PrimaryDateTime" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PrimaryNewAmount" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="SendDateTime" Nullable="false" />
+          <Property Type="String" Name="IsoTrack" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="Boolean" Name="IsInTry" Nullable="false" />
+          <Property Type="Int32" Name="ServiceType" Nullable="false" />
+          <Property Type="Binary" Name="PinBlock" Nullable="false" MaxLength="100" FixedLength="true" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="KioskDataModelStoreContainer" CdmEntityContainer="KioskDataEntities">
+          <EntitySetMapping Name="tblParameters"><EntityTypeMapping TypeName="KioskDataModel.tblParameters"><MappingFragment StoreEntitySet="tblParameters">
+            <ScalarProperty Name="ParamKey" ColumnName="ParamKey" />
+            <ScalarProperty Name="ParamValue" ColumnName="ParamValue" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="tblShetabError"><EntityTypeMapping TypeName="KioskDataModel.tblShetabError"><MappingFragment StoreEntitySet="tblShetabError">
+            <ScalarProperty Name="C_ShetabErrorCode_" ColumnName="[ShetabErrorCode]" />
+            <ScalarProperty Name="C_ShetabErrorDes_" ColumnName="[ShetabErrorDes]" />
+            <ScalarProperty Name="C_BankSN_" ColumnName="[BankSN]" />
+            <ScalarProperty Name="C_ShetabErrorDesEn_" ColumnName="[ShetabErrorDesEn]" />
+            <ScalarProperty Name="C_ShetabErrorDesFin_" ColumnName="[ShetabErrorDesFin]" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="tblTransactions">
+            <EntityTypeMapping TypeName="KioskDataModel.tblTransactions">
+              <MappingFragment StoreEntitySet="tblTransactions">
+                <ScalarProperty Name="SendDateTime" ColumnName="SendDateTime" />
+                <ScalarProperty Name="MessageType" ColumnName="MessageType" />
+                <ScalarProperty Name="RefrenceNumber" ColumnName="RefrenceNumber" />
+                <ScalarProperty Name="Stan" ColumnName="Stan" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblTransactionsReply">
+            <EntityTypeMapping TypeName="KioskDataModel.tblTransactionsReply">
+              <MappingFragment StoreEntitySet="tblTransactionsReply">
+                <ScalarProperty Name="ReplyCode" ColumnName="ReplyCode" />
+                <ScalarProperty Name="SendDateTime" ColumnName="SendDateTime" />
+                <ScalarProperty Name="MessageType" ColumnName="MessageType" />
+                <ScalarProperty Name="RefrenceNumber" ColumnName="RefrenceNumber" />
+                <ScalarProperty Name="Stan" ColumnName="Stan" />
+                <ScalarProperty Name="TranReqID" ColumnName="TranReqID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblReversalTrans">
+            <EntityTypeMapping TypeName="KioskDataModel.tblReversalTrans">
+              <MappingFragment StoreEntitySet="tblReversalTrans">
+                <ScalarProperty Name="IsInTry" ColumnName="IsInTry" />
+                <ScalarProperty Name="PinBlock" ColumnName="PinBlock" />
+                <ScalarProperty Name="IsoTrack" ColumnName="IsoTrack" />
+                <ScalarProperty Name="SendDateTime" ColumnName="SendDateTime" />
+                <ScalarProperty Name="PrimaryNewAmount" ColumnName="PrimaryNewAmount" />
+                <ScalarProperty Name="PrimaryDateTime" ColumnName="PrimaryDateTime" />
+                <ScalarProperty Name="PrimaryRefNumber" ColumnName="PrimaryRefNumber" />
+                <ScalarProperty Name="PrimaryStan" ColumnName="PrimaryStan" />
+                <ScalarProperty Name="PrimaryAmount" ColumnName="PrimaryAmount" />
+                <ScalarProperty Name="PrimaryProcessCode" ColumnName="PrimaryProcessCode" />
+                <ScalarProperty Name="CardNumber" ColumnName="CardNumber" />
+                <ScalarProperty Name="TranRefNumber" ColumnName="TranRefNumber" />
+                <ScalarProperty Name="Stan" ColumnName="Stan" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblSettleTrans">
+            <EntityTypeMapping TypeName="KioskDataModel.tblSettleTrans">
+              <MappingFragment StoreEntitySet="tblSettleTrans">
+                <ScalarProperty Name="IsInTry" ColumnName="IsInTry" />
+                <ScalarProperty Name="SendDateTime" ColumnName="SendDateTime" />
+                <ScalarProperty Name="TranRefNumber" ColumnName="TranRefNumber" />
+                <ScalarProperty Name="Stan" ColumnName="Stan" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblSettleReversTrans">
+            <EntityTypeMapping TypeName="KioskDataModel.tblSettleReversTrans">
+              <MappingFragment StoreEntitySet="tblSettleReversTrans">
+                <ScalarProperty Name="PinBlock" ColumnName="PinBlock" />
+                <ScalarProperty Name="ServiceType" ColumnName="ServiceType" />
+                <ScalarProperty Name="IsInTry" ColumnName="IsInTry" />
+                <ScalarProperty Name="IsoTrack" ColumnName="IsoTrack" />
+                <ScalarProperty Name="SendDateTime" ColumnName="SendDateTime" />
+                <ScalarProperty Name="PrimaryNewAmount" ColumnName="PrimaryNewAmount" />
+                <ScalarProperty Name="PrimaryDateTime" ColumnName="PrimaryDateTime" />
+                <ScalarProperty Name="PrimaryRefNumber" ColumnName="PrimaryRefNumber" />
+                <ScalarProperty Name="PrimaryStan" ColumnName="PrimaryStan" />
+                <ScalarProperty Name="PrimaryAmount" ColumnName="PrimaryAmount" />
+                <ScalarProperty Name="PrimaryProcessCode" ColumnName="PrimaryProcessCode" />
+                <ScalarProperty Name="CardNumber" ColumnName="CardNumber" />
+                <ScalarProperty Name="TranRefNumber" ColumnName="TranRefNumber" />
+                <ScalarProperty Name="Stan" ColumnName="Stan" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="ParametersDataModel">
+        <EntityTypeShape EntityType="KioskDataModel.tblParameters" Width="1.5" PointX="0.75" PointY="0.75" Height="1.2636116536458335" IsExpanded="true" />
+        <EntityTypeShape EntityType="KioskDataModel.tblShetabError" Width="1.5" PointX="2.75" PointY="0.75" Height="1.7566536458333335" IsExpanded="true" />
+        <EntityTypeShape EntityType="KioskDataModel.tblTransactions" Width="1.5" PointX="0.875" PointY="2.875" Height="1.7566536458333335" />
+        <EntityTypeShape EntityType="KioskDataModel.tblTransactionsReply" Width="1.875" PointX="3.875" PointY="2.875" Height="2.0853483072916665" />
+        <EntityTypeShape EntityType="KioskDataModel.tblReversalTrans" Width="1.625" PointX="0.875" PointY="4.875" Height="2.9070849609374996" />
+        <EntityTypeShape EntityType="KioskDataModel.tblSettleTrans" Width="1.5" PointX="3.375" PointY="5.75" Height="1.5923063151041674" />
+        <EntityTypeShape EntityType="KioskDataModel.tblSettleReversTrans" Width="1.5" PointX="5.375" PointY="5.75" Height="3.4001269531249996" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,169 @@
+# Trx Framework uses an excellent tool for its string resources generation,
+# you can get it from http://wah.onterra.net/blog/archive/2004/12/09/190.aspx.
+
+# This file is used to generate SR.cs and SR.resx files. The copyright notice
+# for those files appears here, in this SR.strings file.
+#
+
+# Note that if you want to use non-Ascii characters in this file, then you have
+# to save this file with a UTF8 signature. This can be achieved by right clicking
+# over the file in the solution explorer, select Open With -> Text Editor (with Encoding )
+# Select Unicode (UTF-8 with Signature), and save.
+#
+# Now you will be able to insert and unicode character into the document.
+#
+
+# Options are specified as lines starting with "#!"
+
+# Comments are lines starting with ";" or "#"
+
+# To define the SR class public instead of internal (default):
+##! accessor_class_accessibility = public
+
+# To specify a static property that will be used to select the appropriate 
+# culture for the resources, e.g. Thread.CurrentUICulture, or CultureInfo.Neutral
+# to always pick the neutral culture, or a custom class.
+##! culture_info = Resources.CultureInfo
+
+# To not generate any class for this .string files, just the resources (e.g. for
+# secondary .strings files)
+##! generate_class = false
+
+# If this file has a Custom Tool Namespace set, then the tool cannot obtain
+# the correct namespace that the resources will be compiled into. In this case
+# it is necessary to specify the resrouce namespace. This can be worked out
+# by compiling the assembly, then opening in Reflector, and looking at the resources.
+#
+# For VB.NET the resource namespace will always be the Root Namespace of the project.
+#
+# For C# the resource namespace will be (For a .strings file nested in two folders):
+#   <DefaultNamespace>.<FirstFolder>.<SecondFolder>
+# e.g. ProjectDir\Resources\Custom\SR.strings
+#    => <DefaultNamespace>.Resources.Custom
+#
+##! resource_namespace = RootNamespace
+
+
+# strings sections have the format
+#       [strings{.locale}]
+#
+# e.g. 
+#       [strings]
+#       [strings.de]
+#       [strings.de-DE]
+#       [strings.de-CK]
+#
+# The first strings section in this file will be used to generate the class,
+# so must include all the resource names that will be available.
+
+#! culture_info = Resources.CultureInfo
+
+[strings]
+CantFormatMessageHeader = Can't format message header.
+FieldMustBeBitmap( int fieldNumber) = Field number {0} must be a bitmap.
+UnknownFieldFormatter( int fieldNumber) = Unknown formatter for field number {0}.
+CantFormatField( int fieldNumber) = Can't format field number {0}.
+CantParseMessageHeader = Can't parse message header.
+CantParseField( int fieldNumber) = Can't parse field number {0}.
+MoreDataNeeded = More data needed to parse message.
+UnknownFormatter( int fieldNumber) = Field number {0} is present in message, but we don't known her formatter.
+CantConvertFieldToProperty( int fieldNumber, string name) = Can't convert field '{1}' value to property '{0}'.
+OnlyZeroToNAllowed( int length) = Only 0 to {0} is allowed.
+LessOrEqualToN( int length) = Must be less or equal than {0}.
+InsufficientData = Insufficient data.
+InvalidLengthDetected( int length) = Invalid length detected, expecting a digit but {0} was found.
+InvalidLengthType( int length) = Invalid data type detected, expecting a digit but {0} was found.
+CantBeLowerThanZero = Can't be lower than zero.
+InvalidPad = Pad value must be between 0 and 15.
+CantHandleParameterType = Can't handle parameter type.
+BinaryMessageFieldExpected = Field must be a binary message field.
+MustBeLowerOrEqualToUpperFieldNumber = Must be lower or equal to upperFieldNumber.
+UnexpectedLength = Unexpected length.
+InvalidLength = Invalid length.
+InvalidFieldNumberParameter( int from, int to) = Invalid fieldNumber number, must be between {0} and {1}.
+FieldMustBeABitmap = Field must be a bitmap.
+ComponentIsNotABitmapField = Component is not a bitmap field.
+TheCollectionIsEmpty = The collection is empty.
+FieldDoesntExists = Field doesn't exists.
+ComponentIsNotAField = Component must be a message field.
+InsufficientDataMoreIsRequired( int length) = Insufficient data, {0} required.
+MustBeGreaterThanZero = Must be greater than zero.
+OutOfBound = Out of bound.
+CantSetMti = Can't set MTI as response because message isn't a request.
+MtiFormatterRequired = Message type identifier formatter isn't set.
+CantParseMti = Can't parse the message type identifier.
+ComponentIsNotAnISO8583Message = Component is not an ISO 8583 message.
+ComponentIsNotMessageHeader = Component must be a message header.
+ComponentIsNotAMessage = Component is not a message.
+ComponentIsNotAMessagingComponent = Object must be a messaging component.
+NonNumericValue( string value) = The value '{0}' isn't a numeric value.
+CantBeNegative = Can't be negative.
+InvalidDataConsumed = Invalid data consumed.
+StringMessageFieldExpected = Field must be a string message field.
+InvalidByteLengthDetected( byte length) = Invalid length detected, expecting a digit but {0} ASCII code was found.
+StringHeaderExpected = Header must be a string message header.
+CantBeGreaterThanMaximumLength = Can't be greater than maximumLength.
+LengthEncoderRequired = Must specify a valid length encoder.
+Between( int from, int to) = Must be between {0} and {1}.
+BetweenXAndYZReceived( int from, int to, int recv) = Length must be between {0} and {1}, {2} was received.
+UnexpectedBiggerDataLength = Unexpected bigger data length.
+MustBeGreaterThanMinimumValue = Must be greater than minimumValue.
+DecodedBitmap( int fieldNumber, string value) = Decoded field {0,5}: {1}
+DecodedField( int fieldNumber, string value) = Decoded field {0,5}: [{1}]
+InnerMessageFieldExpected = Field must be an inner message field.
+CantParseInnerMessage = Insufficient data to parse inner message.
+
+[strings.es]
+CantFormatMessageHeader = No se puede formatear el cabezal del mensaje.
+FieldMustBeBitmap( int fieldNumber) = El campo {0} debe ser un mapa de bits.
+UnknownFieldFormatter( int fieldNumber) = Formateador desconocido para el campo {0}.
+CantFormatField( int fieldNumber) = No se puede formatear el campo {0}.
+CantParseMessageHeader = No se puede analizar el cabezal del mensaje.
+CantParseField( int fieldNumber) = No se puede analizar el campo {0}.
+MoreDataNeeded = Mas datos se necesitan para analizar el mensaje.
+UnknownFormatter( int fieldNumber) = El campo {0} está presente en el mensaje, pero se desconoce su formateador.
+CantConvertFieldToProperty( int fieldNumber, string name) = No se puede convertir el valor del campo '{1}' en la propiedad '{0}'.
+OnlyZeroToNAllowed( int length) = Solo se permite desde 0 a {0}.
+LessOrEqualToN( int length) = Debe ser menor o igual a {0}.
+InsufficientData = Datos insuficientes.
+InvalidLengthDetected( int length) = Largo inválido detectado, se esperaba un dígito pero {0} se encontró.
+InvalidLengthType( int length) = Tipo de datos inválido, se esperaba un dígito pero {0} se encontró.
+CantBeLowerThanZero = No puede ser menor a cero.
+InvalidPad = El relleno debe estar entre 0 y 15.
+CantHandleParameterType = No se puede manejar el tipo de parámetro.
+BinaryMessageFieldExpected = El campo debe ser un campo de tipo binario.
+MustBeLowerOrEqualToUpperFieldNumber = Debe ser menor o igual a upperFieldNumber.
+UnexpectedLength = Largo inesperado.
+InvalidLength = Largo inválido.
+InvalidFieldNumberParameter( int from, int to) = Valor para fieldNumber inválido, debe estar entre {0} y {1}.
+FieldMustBeABitmap = El campo debe ser un mapa de bits.
+ComponentIsNotABitmapField = El componente no es un mapa de bits.
+TheCollectionIsEmpty = La colección está vacía.
+FieldDoesntExists = El campo no existe.
+ComponentIsNotAField = El componente debe ser un campo de mensaje.
+InsufficientDataMoreIsRequired( int length) = Datos insuficientes, se esperaban {0}.
+MustBeGreaterThanZero = Debe ser mayor a cero.
+OutOfBound = Fuera de límite.
+CantSetMti = No se puede asignar el MTI de respuesta porque el mensaje no es un requerimiento.
+MtiFormatterRequired = El formateador del MTI no ha sido especificado.
+CantParseMti = No se puede analizar el MTI.
+ComponentIsNotAnISO8583Message = El componente no es un mensaje ISO 8583.
+ComponentIsNotMessageHeader = El componente debe ser un cabezal de mensaje.
+ComponentIsNotAMessage = El componente no es un mensaje.
+ComponentIsNotAMessagingComponent = El componente debe ser un componente de mensajería.
+NonNumericValue( string value) = El valor '{0}' no es de tipo numerico.
+CantBeNegative = No puede ser negativo.
+InvalidDataConsumed = Se han consumido datos inválidos.
+StringMessageFieldExpected = El campo debe ser un campo de tipo string.
+InvalidByteLengthDetected( byte length) = Largo inválido detetado, se esperaba un dígito pero se recibió el código ASCII {0}.
+StringHeaderExpected = El cabezal debe ser un cabezal de tipo string.
+CantBeGreaterThanMaximumLength = No puede ser mayor a maximumLength.
+LengthEncoderRequired = Se debe especificar un codificador de largo válido.
+Between( int from, int to) = Debe estar entre {0} y {1}.
+BetweenXAndYZReceived( int from, int to, int recv) = El largo debe estar entre {0} y {1}, se recibió {2}.
+UnexpectedBiggerDataLength = Se recibieron mas datos de los esperados.
+MustBeGreaterThanMinimumValue = Debe ser mayor que minimumValue.
+DecodedBitmap( int fieldNumber, string value) = Campo decodificado {0,5}: {1}
+DecodedField( int fieldNumber, string value) = Campo decodificado {0,5}: [{1}]
+InnerMessageFieldExpected = El campo debe ser un campo de tipo mensaje anidado.
+CantParseInnerMessage = Datos insuficientes como para obtener el mensaje anidado.

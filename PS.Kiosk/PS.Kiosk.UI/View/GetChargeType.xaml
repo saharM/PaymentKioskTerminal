@@ -1,0 +1,113 @@
+﻿<UserControl x:Class="PS.Kiosk.UI.View.GetChargeType"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d"
+         d:DesignHeight="300" d:DesignWidth="300"   >
+   
+    <Grid ShowGridLines="False"  IsHitTestVisible="True">
+        <Grid.Background>
+            <ImageBrush ImageSource="..\Resources\Kart Sharj.jpg" Stretch="Fill" TileMode="None" />
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+
+            
+          
+            <ColumnDefinition Width="9*" />
+            <ColumnDefinition Width="13*" />
+            <ColumnDefinition Width="33*" />
+            <ColumnDefinition Width="31*" />
+            <ColumnDefinition Width="61*" />
+            <ColumnDefinition Width="66*" />
+            <ColumnDefinition Width="56*" />
+            <ColumnDefinition Width="31*" />
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+
+            <RowDefinition Height="13*" />
+            <RowDefinition Height="28*" />
+            <RowDefinition Height="115*" />
+            <RowDefinition Height="56*" />
+            <RowDefinition Height="27*" />
+            <RowDefinition Height="29*" />
+            <RowDefinition Height="32*" />
+        </Grid.RowDefinitions>
+
+        <!--Grid.Column="0" Grid.Row="1"-->
+
+        <Button Grid.Column="2" Grid.Row="3"  HorizontalAlignment="Stretch"  Name="btnRightel" VerticalAlignment="Stretch" Click="btnRightel_Click" Grid.ColumnSpan="2">
+            <Button.Background>
+                <ImageBrush ImageSource="..\Resources\Rightel.png"  Stretch="Fill"/>
+            </Button.Background>
+            <Button.Foreground>
+                <SolidColorBrush />
+            </Button.Foreground>
+            <Button.BorderBrush>
+                <SolidColorBrush />
+            </Button.BorderBrush>
+        </Button>
+
+
+        <Button Grid.Column="4" Grid.Row="3"  HorizontalAlignment="Stretch"  Name="btnTalia" VerticalAlignment="Stretch" Click="btnTalia_Click" >
+            <Button.Background>
+                <ImageBrush ImageSource="..\Resources\Talia.png"  Stretch="Fill"/>
+            </Button.Background>
+            <Button.Foreground>
+                <SolidColorBrush />
+            </Button.Foreground>
+            <Button.BorderBrush>
+                <SolidColorBrush />
+            </Button.BorderBrush>
+        </Button>
+        <Button Grid.Column="5" Grid.Row="3"  HorizontalAlignment="Stretch"  Name="btnIrancell" VerticalAlignment="Stretch"  Click="btnIrancell_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="..\Resources\Irancell.png"  Stretch="Fill"/>
+            </Button.Background>
+            <Button.Foreground>
+                <SolidColorBrush />
+            </Button.Foreground>
+            <Button.BorderBrush>
+                <SolidColorBrush />
+            </Button.BorderBrush>
+        </Button>
+        <Button Grid.Column="6" Grid.Row="3"  HorizontalAlignment="Stretch"  Name="btnHamrahAval" VerticalAlignment="Stretch" Click="btnHamrahAval_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="..\Resources\Hamrahe aval.png"  Stretch="Fill"/>
+            </Button.Background>
+            <Button.Foreground>
+                <SolidColorBrush />
+            </Button.Foreground>
+            <Button.BorderBrush>
+                <SolidColorBrush />
+            </Button.BorderBrush>
+        </Button>
+
+        <Button Content="" HorizontalAlignment="Stretch" Name="btnReturn" VerticalAlignment="Stretch"  Grid.Column="3" Grid.Row="1" Click="btnReturn_Click" >
+            <Button.Foreground>
+                <SolidColorBrush />
+            </Button.Foreground>
+            <Button.BorderBrush>
+                <SolidColorBrush />
+            </Button.BorderBrush>
+            <Button.Background>
+
+                <ImageBrush ImageSource="..\Resources\Bazgasht.png"  Stretch="Fill"/>
+            </Button.Background>
+        </Button>
+        
+        <Button Content="" HorizontalAlignment="Stretch" Name="btnExit" VerticalAlignment="Stretch" Click="btnExit_Click" Grid.Column="2" Grid.Row="1">
+            <Button.Foreground>
+                <SolidColorBrush />
+            </Button.Foreground>
+            <Button.BorderBrush>
+                <SolidColorBrush />
+            </Button.BorderBrush>
+            <Button.Background>
+
+                <ImageBrush ImageSource="..\Resources\Payan.png"  Stretch="Fill"/>
+            </Button.Background>
+        </Button>
+    </Grid>
+</UserControl>

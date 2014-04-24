@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9DE848F5-3BFB-44C3-B712-8B4713AA7B8E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PS.Kiosk.Messaging</RootNamespace>
+    <AssemblyName>PS.Kiosk.Messaging</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BillCtrl">
+      <HintPath>..\ExternalResources\BillCtrl.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\ExternalResources\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Messaging\BasicMessageFormatter.cs" />
+    <Compile Include="Messaging\BasicMessagesIdentifier.cs" />
+    <Compile Include="Messaging\BcdLengthEncoder.cs" />
+    <Compile Include="Messaging\BcdStringEncoder.cs" />
+    <Compile Include="Messaging\BinaryEncoder.cs" />
+    <Compile Include="Messaging\BinaryField.cs" />
+    <Compile Include="Messaging\BinaryFieldFormatter.cs" />
+    <Compile Include="Messaging\BitMapField.cs" />
+    <Compile Include="Messaging\BitMapFieldFormatter.cs" />
+    <Compile Include="Messaging\BitMapFieldXmlRendering.cs" />
+    <Compile Include="Messaging\ConditionalFormatting\BinaryConstantExpression.cs" />
+    <Compile Include="Messaging\ConditionalFormatting\ConditionalAndOperator.cs" />
+    <Compile Include="Messaging\ConditionalFormatting\ConditionalFieldFormatter.cs" />
+    <Compile Include="Messaging\ConditionalFormatting\ConditionalOrOperator.cs" />
+    <Compile Include="Messaging\ConditionalFormatting\EqualityEqualsOperator.cs" />
+    <Compile Include="Messaging\ConditionalFormatting\ExpressionCompileException.cs" />
+    <Compile Include="Messaging\ConditionalFormatting\ExpressionEvaluationException.cs" />
+    <Compile Include="Messaging\ConditionalFormatting\FieldValueEqualsBinaryOperator.cs" />
+    <Compile Include="Messaging\ConditionalFormatting\FieldValueEqualsStringOperator.cs" />
+    <Compile Include="Messaging\ConditionalFormatting\IBooleanExpression.cs" />
+    <Compile Include="Messaging\ConditionalFormatting\IConditionalFieldEvaluator.cs" />
+    <Compile Include="Messaging\ConditionalFormatting\IMessageExpression.cs" />
+    <Compile Include="Messaging\ConditionalFormatting\IsSetExpression.cs" />
+    <Compile Include="Messaging\ConditionalFormatting\IValueExpression.cs" />
+    <Compile Include="Messaging\ConditionalFormatting\LexicalAnalyzer.cs" />
+    <Compile Include="Messaging\ConditionalFormatting\MessageExpression.cs" />
+    <Compile Include="Messaging\ConditionalFormatting\MidEqualsBinaryOperator.cs" />
+    <Compile Include="Messaging\ConditionalFormatting\MidEqualsStringOperator.cs" />
+    <Compile Include="Messaging\ConditionalFormatting\MtiEqualsExpression.cs" />
+    <Compile Include="Messaging\ConditionalFormatting\NegationOperator.cs" />
+    <Compile Include="Messaging\ConditionalFormatting\ParentMessageExpression.cs" />
+    <Compile Include="Messaging\ConditionalFormatting\SemanticParser.cs" />
+    <Compile Include="Messaging\ConditionalFormatting\StringConstantExpression.cs" />
+    <Compile Include="Messaging\ConditionalFormatting\SubMessageExpression.cs" />
+    <Compile Include="Messaging\ConditionalFormatting\Tokenizer.cs" />
+    <Compile Include="Messaging\ConditionalFormatting\Yytoken.cs" />
+    <Compile Include="Messaging\Field.cs" />
+    <Compile Include="Messaging\FieldAttribute.cs" />
+    <Compile Include="Messaging\FieldCollection.cs" />
+    <Compile Include="Messaging\FieldFormatter.cs" />
+    <Compile Include="Messaging\FieldFormatterCollection.cs" />
+    <Compile Include="Messaging\FieldFormatterEventArgs.cs" />
+    <Compile Include="Messaging\FieldValidationException.cs" />
+    <Compile Include="Messaging\FieldXmlRendering.cs" />
+    <Compile Include="Messaging\FixedLengthManager.cs" />
+    <Compile Include="Messaging\FormatterContext.cs" />
+    <Compile Include="Messaging\HexadecimalBinaryEncoder.cs" />
+    <Compile Include="Messaging\HexadecimalStringEncoder.cs" />
+    <Compile Include="Messaging\IBinaryEncoder.cs" />
+    <Compile Include="Messaging\ILengthEncoder.cs" />
+    <Compile Include="Messaging\IMessageFormatter.cs" />
+    <Compile Include="Messaging\IMessageHeaderFormatter.cs" />
+    <Compile Include="Messaging\IMessagesIdentifier.cs" />
+    <Compile Include="Messaging\InnerMessageField.cs" />
+    <Compile Include="Messaging\InnerMessageFieldFormatter.cs" />
+    <Compile Include="Messaging\Iso8583\Iso8583Ascii1987MessageFormatter.cs" />
+    <Compile Include="Messaging\Iso8583\Iso8583Ascii1993MessageFormatter.cs" />
+    <Compile Include="Messaging\Iso8583\Iso8583Bin1987MessageFormatter.cs" />
+    <Compile Include="Messaging\Iso8583\Iso8583Bin1993MessageFormatter.cs" />
+    <Compile Include="Messaging\Iso8583\Iso8583Message.cs" />
+    <Compile Include="Messaging\Iso8583\Iso8583MessageFormatter.cs" />
+    <Compile Include="Messaging\Iso8583\Iso8583MessageXmlRendering.cs" />
+    <Compile Include="Messaging\IStringConverter.cs" />
+    <Compile Include="Messaging\IStringEncoder.cs" />
+    <Compile Include="Messaging\IStringValidator.cs" />
+    <Compile Include="Messaging\LengthManager.cs" />
+    <Compile Include="Messaging\Message.cs" />
+    <Compile Include="Messaging\MessageHeader.cs" />
+    <Compile Include="Messaging\MessageHeaderXmlRendering.cs" />
+    <Compile Include="Messaging\MessageXmlRendering.cs" />
+    <Compile Include="Messaging\MessagingComponent.cs" />
+    <Compile Include="Messaging\MessagingComponentXmlRendering.cs" />
+    <Compile Include="Messaging\MessagingException.cs" />
+    <Compile Include="Messaging\NumericValidator.cs" />
+    <Compile Include="Messaging\ParserContext.cs" />
+    <Compile Include="Messaging\Resources.cs" />
+    <Compile Include="Messaging\SR.cs" />
+    <Compile Include="Messaging\StringEncoder.cs" />
+    <Compile Include="Messaging\StringField.cs" />
+    <Compile Include="Messaging\StringFieldFormatter.cs" />
+    <Compile Include="Messaging\StringLengthEncoder.cs" />
+    <Compile Include="Messaging\StringMessageHeader.cs" />
+    <Compile Include="Messaging\StringMessageHeaderFormatter.cs" />
+    <Compile Include="Messaging\Target.cs" />
+    <Compile Include="Messaging\VariableLengthManager.cs" />
+    <Compile Include="Messaging\VolatileStanSequencer.cs" />
+    <Compile Include="MsgCall\Transactions.cs" />
+    <Compile Include="Operations\CsAgent.cs" />
+    <Compile Include="Operations\CsChangeDateTime.cs" />
+    <Compile Include="Operations\CsElement.cs" />
+    <Compile Include="Operations\CsMerchant.cs" />
+    <Compile Include="Operations\CsParameters.cs" />
+    <Compile Include="Operations\CsResponse.cs" />
+    <Compile Include="Operations\CsSecurityKeys.cs" />
+    <Compile Include="Operations\CsSender.cs" />
+    <Compile Include="Operations\CsTimer.cs" />
+    <Compile Include="Operations\CsTransaction.cs" />
+    <Compile Include="Operations\CsUtil.cs" />
+    <Compile Include="Operations\IDGenerator.cs" />
+    <Compile Include="Operations\IniFile.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utilities\CsFanapEncoder.cs" />
+    <Compile Include="Utilities\ErrorEventArgs.cs" />
+    <Compile Include="Utilities\FrameworkEncoding.cs" />
+    <Compile Include="Utilities\ISequencer.cs" />
+    <Compile Include="Utilities\IStringPadding.cs" />
+    <Compile Include="Utilities\NetUtilities.cs" />
+    <Compile Include="Utilities\SpacePaddingLeft.cs" />
+    <Compile Include="Utilities\SpacePaddingRight.cs" />
+    <Compile Include="Utilities\StringPaddingLeft.cs" />
+    <Compile Include="Utilities\StringPaddingRight.cs" />
+    <Compile Include="Utilities\StringUtilities.cs" />
+    <Compile Include="Utilities\UtilityMethods.cs" />
+    <Compile Include="Utilities\VolatileSequencer.cs" />
+    <Compile Include="Utilities\ZeroPaddingLeft.cs" />
+    <Compile Include="Utilities\ZeroPaddingRight.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Operations\SR.strings" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Messaging\SR.es.resx">
+      <DependentUpon>SR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Messaging\SR.resx">
+      <DependentUpon>SR.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PS.Kiosk.Common\PS.Kiosk.Common.csproj">
+      <Project>{DDE7BCE4-CE3D-49DB-9275-D37935584F0A}</Project>
+      <Name>PS.Kiosk.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PS.Kiosk.DeviceController\PS.Kiosk.DeviceController.csproj">
+      <Project>{FA3A8ED9-D6BF-4721-91D7-A34FB55DB9DE}</Project>
+      <Name>PS.Kiosk.DeviceController</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PS.Kiosk.Framework\PS.Kiosk.Framework.csproj">
+      <Project>{02AE7EEA-4055-4565-96E9-2346A833ABCD}</Project>
+      <Name>PS.Kiosk.Framework</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

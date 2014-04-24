@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CustomError>
+  <CustomErrorTable>
+    <Code>0</Code>
+    <Name>Unable To Connect To DB</Name>
+    <Description>امكان برقراري ارتباط با بانك اطلاعاتي وجود ندارد.</Description>
+  </CustomErrorTable>
+
+  <CustomErrorTable>
+    <Code>1</Code>
+    <Name>Internal Exception</Name>
+    <Description>امکان دريافت اطلاعات وجود ندارد.</Description>
+  </CustomErrorTable>
+
+  <CustomErrorTable>
+    <Code>2</Code>
+    <Name>Could Not Retrive Data</Name>
+    <Description>امکان بازیابی اطلاعات وجود ندارد.</Description>
+  </CustomErrorTable>
+
+  <CustomErrorTable>
+    <Code>3</Code>
+    <Name>Service Is Disable</Name>
+    <Description>سرویس غیر فعال است.</Description>
+  </CustomErrorTable>
+
+  <CustomErrorTable>
+    <Code>4</Code>
+    <Name>Unsuccessful Operation</Name>
+    <Description>عمليات نا موفق.</Description>
+  </CustomErrorTable>
+
+  
+  <CustomErrorTable>
+    <Code>5</Code>
+    <Name>Invalid UserName OR Password</Name>
+    <Description>نام کاربری يا رمز عبور نا معتبر است.</Description>
+  </CustomErrorTable>
+
+  <CustomErrorTable>
+    <Code>6</Code>
+    <Name>Unsuccessfull Packet Send</Name>
+    <Description>ارسال ناموفق بسته پیغام به سمت سوييچ.</Description>
+  </CustomErrorTable>
+
+
+  <CustomErrorTable>
+    <Code>7</Code>
+    <Name>Invalid Reply Message</Name>
+    <Description>پیغام پاسخ نا معتبر است.</Description>
+  </CustomErrorTable>
+
+  <CustomErrorTable>
+    <Code>8</Code>
+    <Name>Invalid MAC</Name>
+    <Description>نامعتبر MAC.</Description>
+  </CustomErrorTable>
+
+  <CustomErrorTable>
+    <Code>9</Code>
+    <Name>Unsuccessfull Make Msg</Name>
+    <Description>ساختن پیغام درخواست ناموفق بوده است.</Description>
+  </CustomErrorTable>
+
+  <CustomErrorTable>
+    <Code>10</Code>
+    <Name>Insert Card</Name>
+    <Description>کارت خود را وارد کنید.</Description>
+  </CustomErrorTable>
+
+  <CustomErrorTable>
+    <Code>11</Code>
+    <Name>Invalid Parameters</Name>
+    <Description>درخواست نا معتبر است.</Description>
+  </CustomErrorTable>
+
+  <CustomErrorTable>
+    <Code>12</Code>
+    <Name>Could not Login</Name>
+    <Description>عدم امکان اتصال به سرور.</Description>
+  </CustomErrorTable>
+
+  <CustomErrorTable>
+    <Code>13</Code>
+    <Name>No Data For Print</Name>
+    <Description>داده ای برای چاپ وجود ندارد.</Description>
+  </CustomErrorTable>
+
+
+  <CustomErrorTable>
+    <Code>14</Code>
+    <Name>Could Not Set System Local Time</Name>
+    <Description>امکان تنظيم ساعت کيوسک وجود ندارد.</Description>
+  </CustomErrorTable>
+
+  <CustomErrorTable>
+    <Code>15</Code>
+    <Name>Could Not Set Initial Parameters</Name>
+    <Description>امکان بارگزاری سيستم وجود ندارد.</Description>
+  </CustomErrorTable>
+
+  <CustomErrorTable>
+    <Code>16</Code>
+    <Name>Invalid Tran</Name>
+    <Description>تراکنش نا معتبر.</Description>
+  </CustomErrorTable>
+
+  <CustomErrorTable>
+    <Code>17</Code>
+    <Name>Invalid Reply Object</Name>
+    <Description>پاسخی از مرکز دريافت نشد.</Description>
+  </CustomErrorTable>
+  
+
+  <CustomErrorTable>
+    <Code>18</Code>
+    <Name>Printer is UnAvailable</Name>
+    <Description>عملیات انجام نشد،امکان چاپ وجود ندارد.</Description>
+  </CustomErrorTable>
+
+  <CustomErrorTable>
+    <Code>19</Code>
+    <Name>Invalid Pin Len</Name>
+    <Description>رمز ورود چهار رقمی است.</Description>
+  </CustomErrorTable>
+
+  <CustomErrorTable>
+    <Code>20</Code>
+    <Name>Network Is Not Available</Name>
+    <Description>به علت قطعی شبکه سيستم قادر به پاسخگویی نمی باشد.</Description>
+  </CustomErrorTable>
+
+  <CustomErrorTable>
+    <Code>21</Code>
+    <Name>Printer is UnAvailable2</Name>
+    <Description>به علت تمام شدن کاغذ سيستم قادر به پاسخگویی نمی باشد.</Description>
+  </CustomErrorTable>
+  
+ 
+  <CustomErrorTable>
+    <Code>98</Code>
+    <Name>There Is No Charge</Name>
+    <Description>شارژ موجود نيست.</Description>
+  </CustomErrorTable>
+
+  <CustomErrorTable>
+    <Code>99</Code>
+    <Name>The Charge Bill Is Invalid</Name>
+    <Description>اطلاعات قبض غلط است.</Description>
+  </CustomErrorTable>
+
+  
+
+</CustomError>
+

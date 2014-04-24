@@ -1,0 +1,221 @@
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="ResMimeType">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="Version">
+    <value>1.0.0.0</value>
+  </resheader>
+  <resheader name="Reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="Writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="culture_info">
+    <value>Resources.CultureInfo</value>
+  </resheader>
+  <data name="CantFormatMessageHeader">
+    <value>Can't format message header.</value>
+  </data>
+  <data name="FieldMustBeBitmap">
+    <value>Field number {0} must be a bitmap.</value>
+    <comment> int fieldNumber</comment>
+  </data>
+  <data name="UnknownFieldFormatter">
+    <value>Unknown formatter for field number {0}.</value>
+    <comment> int fieldNumber</comment>
+  </data>
+  <data name="CantFormatField">
+    <value>Can't format field number {0}.</value>
+    <comment> int fieldNumber</comment>
+  </data>
+  <data name="CantParseMessageHeader">
+    <value>Can't parse message header.</value>
+  </data>
+  <data name="CantParseField">
+    <value>Can't parse field number {0}.</value>
+    <comment> int fieldNumber</comment>
+  </data>
+  <data name="MoreDataNeeded">
+    <value>More data needed to parse message.</value>
+  </data>
+  <data name="UnknownFormatter">
+    <value>Field number {0} is present in message, but we don't known her formatter.</value>
+    <comment> int fieldNumber</comment>
+  </data>
+  <data name="CantConvertFieldToProperty">
+    <value>Can't convert field '{1}' value to property '{0}'.</value>
+    <comment> int fieldNumber, string name</comment>
+  </data>
+  <data name="OnlyZeroToNAllowed">
+    <value>Only 0 to {0} is allowed.</value>
+    <comment> int length</comment>
+  </data>
+  <data name="LessOrEqualToN">
+    <value>Must be less or equal than {0}.</value>
+    <comment> int length</comment>
+  </data>
+  <data name="InsufficientData">
+    <value>Insufficient data.</value>
+  </data>
+  <data name="InvalidLengthDetected">
+    <value>Invalid length detected, expecting a digit but {0} was found.</value>
+    <comment> int length</comment>
+  </data>
+  <data name="InvalidLengthType">
+    <value>Invalid data type detected, expecting a digit but {0} was found.</value>
+    <comment> int length</comment>
+  </data>
+  <data name="CantBeLowerThanZero">
+    <value>Can't be lower than zero.</value>
+  </data>
+  <data name="InvalidPad">
+    <value>Pad value must be between 0 and 15.</value>
+  </data>
+  <data name="CantHandleParameterType">
+    <value>Can't handle parameter type.</value>
+  </data>
+  <data name="BinaryMessageFieldExpected">
+    <value>Field must be a binary message field.</value>
+  </data>
+  <data name="MustBeLowerOrEqualToUpperFieldNumber">
+    <value>Must be lower or equal to upperFieldNumber.</value>
+  </data>
+  <data name="UnexpectedLength">
+    <value>Unexpected length.</value>
+  </data>
+  <data name="InvalidLength">
+    <value>Invalid length.</value>
+  </data>
+  <data name="InvalidFieldNumberParameter">
+    <value>Invalid fieldNumber number, must be between {0} and {1}.</value>
+    <comment> int from, int to</comment>
+  </data>
+  <data name="FieldMustBeABitmap">
+    <value>Field must be a bitmap.</value>
+  </data>
+  <data name="ComponentIsNotABitmapField">
+    <value>Component is not a bitmap field.</value>
+  </data>
+  <data name="TheCollectionIsEmpty">
+    <value>The collection is empty.</value>
+  </data>
+  <data name="FieldDoesntExists">
+    <value>Field doesn't exists.</value>
+  </data>
+  <data name="ComponentIsNotAField">
+    <value>Component must be a message field.</value>
+  </data>
+  <data name="InsufficientDataMoreIsRequired">
+    <value>Insufficient data, {0} required.</value>
+    <comment> int length</comment>
+  </data>
+  <data name="MustBeGreaterThanZero">
+    <value>Must be greater than zero.</value>
+  </data>
+  <data name="OutOfBound">
+    <value>Out of bound.</value>
+  </data>
+  <data name="CantSetMti">
+    <value>Can't set MTI as response because message isn't a request.</value>
+  </data>
+  <data name="MtiFormatterRequired">
+    <value>Message type identifier formatter isn't set.</value>
+  </data>
+  <data name="CantParseMti">
+    <value>Can't parse the message type identifier.</value>
+  </data>
+  <data name="ComponentIsNotAnISO8583Message">
+    <value>Component is not an ISO 8583 message.</value>
+  </data>
+  <data name="ComponentIsNotMessageHeader">
+    <value>Component must be a message header.</value>
+  </data>
+  <data name="ComponentIsNotAMessage">
+    <value>Component is not a message.</value>
+  </data>
+  <data name="ComponentIsNotAMessagingComponent">
+    <value>Object must be a messaging component.</value>
+  </data>
+  <data name="NonNumericValue">
+    <value>The value '{0}' isn't a numeric value.</value>
+    <comment> string value</comment>
+  </data>
+  <data name="CantBeNegative">
+    <value>Can't be negative.</value>
+  </data>
+  <data name="InvalidDataConsumed">
+    <value>Invalid data consumed.</value>
+  </data>
+  <data name="StringMessageFieldExpected">
+    <value>Field must be a string message field.</value>
+  </data>
+  <data name="InvalidByteLengthDetected">
+    <value>Invalid length detected, expecting a digit but {0} ASCII code was found.</value>
+    <comment> byte length</comment>
+  </data>
+  <data name="StringHeaderExpected">
+    <value>Header must be a string message header.</value>
+  </data>
+  <data name="CantBeGreaterThanMaximumLength">
+    <value>Can't be greater than maximumLength.</value>
+  </data>
+  <data name="LengthEncoderRequired">
+    <value>Must specify a valid length encoder.</value>
+  </data>
+  <data name="Between">
+    <value>Must be between {0} and {1}.</value>
+    <comment> int from, int to</comment>
+  </data>
+  <data name="BetweenXAndYZReceived">
+    <value>Length must be between {0} and {1}, {2} was received.</value>
+    <comment> int from, int to, int recv</comment>
+  </data>
+  <data name="UnexpectedBiggerDataLength">
+    <value>Unexpected bigger data length.</value>
+  </data>
+  <data name="MustBeGreaterThanMinimumValue">
+    <value>Must be greater than minimumValue.</value>
+  </data>
+  <data name="DecodedBitmap">
+    <value>Decoded field {0,5}: {1}</value>
+    <comment> int fieldNumber, string value</comment>
+  </data>
+  <data name="DecodedField">
+    <value>Decoded field {0,5}: [{1}]</value>
+    <comment> int fieldNumber, string value</comment>
+  </data>
+  <data name="InnerMessageFieldExpected">
+    <value>Field must be an inner message field.</value>
+  </data>
+  <data name="CantParseInnerMessage">
+    <value>Insufficient data to parse inner message.</value>
+  </data>
+</root>

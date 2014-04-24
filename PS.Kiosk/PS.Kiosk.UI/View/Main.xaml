@@ -1,0 +1,445 @@
+﻿<UserControl x:Class="PS.Kiosk.UI.View.Main"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:vw="clr-namespace:PS.Kiosk.UI.View"
+             mc:Ignorable="d" 
+             Loaded="UserControl_Loaded">
+    <Grid>
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="MainVisualStateGroup">
+                <VisualState x:Name="ChangeState">
+                    <Storyboard>
+                        <DoubleAnimation To="1" Duration="0:00:00" Storyboard.TargetName="loginView" Storyboard.TargetProperty="Opacity" />
+                        <DoubleAnimation To="0" Duration="0:00:00" Storyboard.TargetName="loginView" Storyboard.TargetProperty="Opacity" />
+                        <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="loginView" Storyboard.TargetProperty="(UIElement.Visibility)">
+                            <DiscreteObjectKeyFrame KeyTime="00:00:00" Value="{x:Static Visibility.Hidden}"/>
+                        </ObjectAnimationUsingKeyFrames>
+                        <DoubleAnimation To="1" Duration="0:00:00" Storyboard.TargetName="waitingView" Storyboard.TargetProperty="Opacity" />
+                        <DoubleAnimation To="0" Duration="0:00:00" Storyboard.TargetName="waitingView" Storyboard.TargetProperty="Opacity" />
+                        <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="waitingView" Storyboard.TargetProperty="(UIElement.Visibility)">
+                            <DiscreteObjectKeyFrame KeyTime="00:00:00" Value="{x:Static Visibility.Hidden}"/>
+                        </ObjectAnimationUsingKeyFrames>
+                        <DoubleAnimation To="1" Duration="0:00:00" Storyboard.TargetName="getPinView" Storyboard.TargetProperty="Opacity" />
+                        <DoubleAnimation To="0" Duration="0:00:00" Storyboard.TargetName="getPinView" Storyboard.TargetProperty="Opacity" />
+                        <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="getPinView" Storyboard.TargetProperty="(UIElement.Visibility)">
+                            <DiscreteObjectKeyFrame KeyTime="00:00:00" Value="{x:Static Visibility.Hidden}"/>
+                        </ObjectAnimationUsingKeyFrames>
+                        <DoubleAnimation To="1" Duration="0:00:00" Storyboard.TargetName="mainMenuView" Storyboard.TargetProperty="Opacity" />
+                        <DoubleAnimation To="0" Duration="0:00:00" Storyboard.TargetName="mainMenuView" Storyboard.TargetProperty="Opacity" />
+                        <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="mainMenuView" Storyboard.TargetProperty="(UIElement.Visibility)">
+                            <DiscreteObjectKeyFrame KeyTime="00:00:00" Value="{x:Static Visibility.Hidden}"/>
+                        </ObjectAnimationUsingKeyFrames>
+                        
+                        <DoubleAnimation To="1" Duration="0:00:00" Storyboard.TargetName="getBalanceInquiryActionView" Storyboard.TargetProperty="Opacity" />
+                        <DoubleAnimation To="0" Duration="0:00:00" Storyboard.TargetName="getBalanceInquiryActionView" Storyboard.TargetProperty="Opacity" />
+                        <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="getBalanceInquiryActionView" Storyboard.TargetProperty="(UIElement.Visibility)">
+                            <DiscreteObjectKeyFrame KeyTime="00:00:00" Value="{x:Static Visibility.Hidden}"/>
+                        </ObjectAnimationUsingKeyFrames>
+
+                        <DoubleAnimation To="1" Duration="0:00:00" Storyboard.TargetName="showChargeTypeActionView" Storyboard.TargetProperty="Opacity" />
+                        <DoubleAnimation To="0" Duration="0:00:00" Storyboard.TargetName="showChargeTypeActionView" Storyboard.TargetProperty="Opacity" />
+                        <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="showChargeTypeActionView" Storyboard.TargetProperty="(UIElement.Visibility)">
+                            <DiscreteObjectKeyFrame KeyTime="00:00:00" Value="{x:Static Visibility.Hidden}"/>
+                        </ObjectAnimationUsingKeyFrames>
+
+                        <DoubleAnimation To="1" Duration="0:00:00" Storyboard.TargetName="showIrancellChargeTypeActionView" Storyboard.TargetProperty="Opacity" />
+                        <DoubleAnimation To="0" Duration="0:00:00" Storyboard.TargetName="showIrancellChargeTypeActionView" Storyboard.TargetProperty="Opacity" />
+                        <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="showIrancellChargeTypeActionView" Storyboard.TargetProperty="(UIElement.Visibility)">
+                            <DiscreteObjectKeyFrame KeyTime="00:00:00" Value="{x:Static Visibility.Hidden}"/>
+                        </ObjectAnimationUsingKeyFrames>
+
+                        <DoubleAnimation To="1" Duration="0:00:00" Storyboard.TargetName="showHamrahAvalChargeTypeActionView" Storyboard.TargetProperty="Opacity" />
+                        <DoubleAnimation To="0" Duration="0:00:00" Storyboard.TargetName="showHamrahAvalChargeTypeActionView" Storyboard.TargetProperty="Opacity" />
+                        <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="showHamrahAvalChargeTypeActionView" Storyboard.TargetProperty="(UIElement.Visibility)">
+                            <DiscreteObjectKeyFrame KeyTime="00:00:00" Value="{x:Static Visibility.Hidden}"/>
+                        </ObjectAnimationUsingKeyFrames>
+
+                        <DoubleAnimation To="1" Duration="0:00:00" Storyboard.TargetName="showTaliaChargeTypeActionView" Storyboard.TargetProperty="Opacity" />
+                        <DoubleAnimation To="0" Duration="0:00:00" Storyboard.TargetName="showTaliaChargeTypeActionView" Storyboard.TargetProperty="Opacity" />
+                        <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="showTaliaChargeTypeActionView" Storyboard.TargetProperty="(UIElement.Visibility)">
+                            <DiscreteObjectKeyFrame KeyTime="00:00:00" Value="{x:Static Visibility.Hidden}"/>
+                        </ObjectAnimationUsingKeyFrames>
+
+                        <DoubleAnimation To="1" Duration="0:00:00" Storyboard.TargetName="showWaitingActionView" Storyboard.TargetProperty="Opacity" />
+                        <DoubleAnimation To="0" Duration="0:00:00" Storyboard.TargetName="showWaitingActionView" Storyboard.TargetProperty="Opacity" />
+                        <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="showWaitingActionView" Storyboard.TargetProperty="(UIElement.Visibility)">
+                            <DiscreteObjectKeyFrame KeyTime="00:00:00" Value="{x:Static Visibility.Hidden}"/>
+                        </ObjectAnimationUsingKeyFrames>
+
+                        <DoubleAnimation To="1" Duration="0:00:00" Storyboard.TargetName="showErrorActionView" Storyboard.TargetProperty="Opacity" />
+                        <DoubleAnimation To="0" Duration="0:00:00" Storyboard.TargetName="showErrorActionView" Storyboard.TargetProperty="Opacity" />
+                        <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="showErrorActionView" Storyboard.TargetProperty="(UIElement.Visibility)">
+                            <DiscreteObjectKeyFrame KeyTime="00:00:00" Value="{x:Static Visibility.Hidden}"/>
+                        </ObjectAnimationUsingKeyFrames>
+
+                        <DoubleAnimation To="1" Duration="0:00:00" Storyboard.TargetName="PrintActionView" Storyboard.TargetProperty="Opacity" />
+                        <DoubleAnimation To="0" Duration="0:00:00" Storyboard.TargetName="PrintActionView" Storyboard.TargetProperty="Opacity" />
+                        <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="PrintActionView" Storyboard.TargetProperty="(UIElement.Visibility)">
+                            <DiscreteObjectKeyFrame KeyTime="00:00:00" Value="{x:Static Visibility.Hidden}"/>
+                        </ObjectAnimationUsingKeyFrames>
+
+                        <DoubleAnimation To="1" Duration="0:00:00" Storyboard.TargetName="PayBillView" Storyboard.TargetProperty="Opacity" />
+                        <DoubleAnimation To="0" Duration="0:00:00" Storyboard.TargetName="PayBillView" Storyboard.TargetProperty="Opacity" />
+                        <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="PayBillView" Storyboard.TargetProperty="(UIElement.Visibility)">
+                            <DiscreteObjectKeyFrame KeyTime="00:00:00" Value="{x:Static Visibility.Hidden}"/>
+                        </ObjectAnimationUsingKeyFrames>
+
+                        <DoubleAnimation To="1" Duration="0:00:00" Storyboard.TargetName="PayBillView" Storyboard.TargetProperty="Opacity" />
+                        <DoubleAnimation To="0" Duration="0:00:00" Storyboard.TargetName="PayBillView" Storyboard.TargetProperty="Opacity" />
+                        <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="PayBillView" Storyboard.TargetProperty="(UIElement.Visibility)">
+                            <DiscreteObjectKeyFrame KeyTime="00:00:00" Value="{x:Static Visibility.Hidden}"/>
+                        </ObjectAnimationUsingKeyFrames>
+
+                        <DoubleAnimation To="1" Duration="0:00:00" Storyboard.TargetName="PayJiringView" Storyboard.TargetProperty="Opacity" />
+                        <DoubleAnimation To="0" Duration="0:00:00" Storyboard.TargetName="PayJiringView" Storyboard.TargetProperty="Opacity" />
+                        <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="PayJiringView" Storyboard.TargetProperty="(UIElement.Visibility)">
+                            <DiscreteObjectKeyFrame KeyTime="00:00:00" Value="{x:Static Visibility.Hidden}"/>
+                        </ObjectAnimationUsingKeyFrames>
+
+
+                        <DoubleAnimation To="1" Duration="0:00:00" Storyboard.TargetName="ShowIrancellServicesView" Storyboard.TargetProperty="Opacity" />
+                        <DoubleAnimation To="0" Duration="0:00:00" Storyboard.TargetName="ShowIrancellServicesView" Storyboard.TargetProperty="Opacity" />
+                        <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="ShowIrancellServicesView" Storyboard.TargetProperty="(UIElement.Visibility)">
+                            <DiscreteObjectKeyFrame KeyTime="00:00:00" Value="{x:Static Visibility.Hidden}"/>
+                        </ObjectAnimationUsingKeyFrames>
+
+                        <DoubleAnimation To="1" Duration="0:00:00" Storyboard.TargetName="ShowIrancellServicePaymentView" Storyboard.TargetProperty="Opacity" />
+                        <DoubleAnimation To="0" Duration="0:00:00" Storyboard.TargetName="ShowIrancellServicePaymentView" Storyboard.TargetProperty="Opacity" />
+                        <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="ShowIrancellServicePaymentView" Storyboard.TargetProperty="(UIElement.Visibility)">
+                            <DiscreteObjectKeyFrame KeyTime="00:00:00" Value="{x:Static Visibility.Hidden}"/>
+                        </ObjectAnimationUsingKeyFrames>
+
+                        <DoubleAnimation To="1" Duration="0:00:00" Storyboard.TargetName="ShowMobinetPaymentView" Storyboard.TargetProperty="Opacity" />
+                        <DoubleAnimation To="0" Duration="0:00:00" Storyboard.TargetName="ShowMobinetPaymentView" Storyboard.TargetProperty="Opacity" />
+                        <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="ShowMobinetPaymentView" Storyboard.TargetProperty="(UIElement.Visibility)">
+                            <DiscreteObjectKeyFrame KeyTime="00:00:00" Value="{x:Static Visibility.Hidden}"/>
+                        </ObjectAnimationUsingKeyFrames>
+
+                        <DoubleAnimation To="1" Duration="0:00:00" Storyboard.TargetName="ShowHamrahAvalServicesView" Storyboard.TargetProperty="Opacity" />
+                        <DoubleAnimation To="0" Duration="0:00:00" Storyboard.TargetName="ShowHamrahAvalServicesView" Storyboard.TargetProperty="Opacity" />
+                        <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="ShowHamrahAvalServicesView" Storyboard.TargetProperty="(UIElement.Visibility)">
+                            <DiscreteObjectKeyFrame KeyTime="00:00:00" Value="{x:Static Visibility.Hidden}"/>
+                        </ObjectAnimationUsingKeyFrames>
+
+                        <DoubleAnimation To="1" Duration="0:00:00" Storyboard.TargetName="PayHamrahAvalTopUpView" Storyboard.TargetProperty="Opacity" />
+                        <DoubleAnimation To="0" Duration="0:00:00" Storyboard.TargetName="PayHamrahAvalTopUpView" Storyboard.TargetProperty="Opacity" />
+                        <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="PayHamrahAvalTopUpView" Storyboard.TargetProperty="(UIElement.Visibility)">
+                            <DiscreteObjectKeyFrame KeyTime="00:00:00" Value="{x:Static Visibility.Hidden}"/>
+                        </ObjectAnimationUsingKeyFrames>
+
+                        <DoubleAnimation To="1" Duration="0:00:00" Storyboard.TargetName="ShowHamrahAvalBillView" Storyboard.TargetProperty="Opacity" />
+                        <DoubleAnimation To="0" Duration="0:00:00" Storyboard.TargetName="ShowHamrahAvalBillView" Storyboard.TargetProperty="Opacity" />
+                        <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="ShowHamrahAvalBillView" Storyboard.TargetProperty="(UIElement.Visibility)">
+                            <DiscreteObjectKeyFrame KeyTime="00:00:00" Value="{x:Static Visibility.Hidden}"/>
+                        </ObjectAnimationUsingKeyFrames>
+
+                        <DoubleAnimation To="1" Duration="0:00:00" Storyboard.TargetName="ShowHamrahAvalBillInfoView" Storyboard.TargetProperty="Opacity" />
+                        <DoubleAnimation To="0" Duration="0:00:00" Storyboard.TargetName="ShowHamrahAvalBillInfoView" Storyboard.TargetProperty="Opacity" />
+                        <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="ShowHamrahAvalBillInfoView" Storyboard.TargetProperty="(UIElement.Visibility)">
+                            <DiscreteObjectKeyFrame KeyTime="00:00:00" Value="{x:Static Visibility.Hidden}"/>
+                        </ObjectAnimationUsingKeyFrames>
+
+                        <DoubleAnimation To="1" Duration="0:00:00" Storyboard.TargetName="RightelView" Storyboard.TargetProperty="Opacity" />
+                        <DoubleAnimation To="0" Duration="0:00:00" Storyboard.TargetName="RightelView" Storyboard.TargetProperty="Opacity" />
+                        <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="RightelView" Storyboard.TargetProperty="(UIElement.Visibility)">
+                            <DiscreteObjectKeyFrame KeyTime="00:00:00" Value="{x:Static Visibility.Hidden}"/>
+                        </ObjectAnimationUsingKeyFrames>
+                        
+                        
+
+                    </Storyboard>
+                </VisualState>
+                <VisualState x:Name="ConnectingState">
+                    <Storyboard x:Name="ConnectingStateAnimation">
+                        <DoubleAnimation To="0" Duration="0:00:00" Storyboard.TargetName="loginView" Storyboard.TargetProperty="Opacity" />
+                        <DoubleAnimation To="1" Duration="0:00:00" Storyboard.TargetName="loginView" Storyboard.TargetProperty="Opacity" />
+                        <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="loginView" Storyboard.TargetProperty="(UIElement.Visibility)">
+                            <DiscreteObjectKeyFrame KeyTime="00:00:00" Value="{x:Static Visibility.Visible}"/>
+                        </ObjectAnimationUsingKeyFrames>
+                    </Storyboard>
+                </VisualState>
+                
+                <VisualState x:Name="ErrorState">
+                    <Storyboard x:Name="ErrorStateAnimation">
+                        <DoubleAnimation To="0" Duration="0:00:00" Storyboard.TargetName="showErrorActionView" Storyboard.TargetProperty="Opacity" />
+                        <DoubleAnimation To="1" Duration="0:00:00" Storyboard.TargetName="showErrorActionView" Storyboard.TargetProperty="Opacity" />
+                        <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="showErrorActionView" Storyboard.TargetProperty="(UIElement.Visibility)">
+                            <DiscreteObjectKeyFrame KeyTime="00:00:00" Value="{x:Static Visibility.Visible}"/>
+                        </ObjectAnimationUsingKeyFrames>
+                    </Storyboard>
+                </VisualState>
+                
+                <VisualState x:Name="WaitingForCardState">
+                    <Storyboard x:Name="WaitingForCardStateAnimation">
+                        <DoubleAnimation To="0" Duration="0:00:00" Storyboard.TargetName="waitingView" Storyboard.TargetProperty="Opacity" />
+                        <DoubleAnimation To="1" Duration="0:00:00" Storyboard.TargetName="waitingView" Storyboard.TargetProperty="Opacity" />
+                        <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="waitingView" Storyboard.TargetProperty="(UIElement.Visibility)">
+                            <DiscreteObjectKeyFrame KeyTime="00:00:00" Value="{x:Static Visibility.Visible}"/>
+                        </ObjectAnimationUsingKeyFrames>
+                    </Storyboard>
+                </VisualState>
+                <VisualState x:Name="GettingPinState">
+                    <Storyboard x:Name="GetPinStateAnimation">
+                        <DoubleAnimation To="0" Duration="0:00:00" Storyboard.TargetName="getPinView" Storyboard.TargetProperty="Opacity" />
+                        <DoubleAnimation To="1" Duration="0:00:00" Storyboard.TargetName="getPinView" Storyboard.TargetProperty="Opacity" />
+                        <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="getPinView" Storyboard.TargetProperty="(UIElement.Visibility)">
+                            <DiscreteObjectKeyFrame KeyTime="00:00:00" Value="{x:Static Visibility.Visible}"/>
+                        </ObjectAnimationUsingKeyFrames>
+                        <!--<DoubleAnimation To="1" Duration="0:00:00" Storyboard.TargetName="getPinView" Storyboard.TargetProperty="PinTextBoxFocus" />-->
+                    </Storyboard>
+                </VisualState>
+                <VisualState x:Name="MainMenuState">
+                    <Storyboard x:Name="MainMenuStateAnimation">
+                        <DoubleAnimation To="0" Duration="0:00:00" Storyboard.TargetName="mainMenuView" Storyboard.TargetProperty="Opacity" />
+                        <DoubleAnimation To="1" Duration="0:00:00" Storyboard.TargetName="mainMenuView" Storyboard.TargetProperty="Opacity" />
+                        <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="mainMenuView" Storyboard.TargetProperty="(UIElement.Visibility)">
+                            <DiscreteObjectKeyFrame KeyTime="00:00:00" Value="{x:Static Visibility.Visible}"/>
+                        </ObjectAnimationUsingKeyFrames>
+                        <!--<DoubleAnimation To="1" Duration="0:00:00" Storyboard.TargetName="mainMenuView" Storyboard.TargetProperty="PinTextBoxFocus" />-->
+                    </Storyboard>
+                </VisualState>
+                <VisualState x:Name="GetBalanceInquiryActionState">
+                    <Storyboard x:Name="GetBalanceInquiryActionStateAnimation">
+                        <DoubleAnimation To="0" Duration="0:00:00" Storyboard.TargetName="getBalanceInquiryActionView" Storyboard.TargetProperty="Opacity" />
+                        <DoubleAnimation To="1" Duration="0:00:00" Storyboard.TargetName="getBalanceInquiryActionView" Storyboard.TargetProperty="Opacity" />
+                        <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="getBalanceInquiryActionView" Storyboard.TargetProperty="(UIElement.Visibility)">
+                            <DiscreteObjectKeyFrame KeyTime="00:00:00" Value="{x:Static Visibility.Visible}"/>
+                        </ObjectAnimationUsingKeyFrames>
+                        <!--<DoubleAnimation To="1" Duration="0:00:00" Storyboard.TargetName="mainMenuView" Storyboard.TargetProperty="PinTextBoxFocus" />-->
+                    </Storyboard>
+                </VisualState>
+
+                <VisualState x:Name="ShowChargeTypeState">
+                    <Storyboard x:Name="ShowChargeTypeActionStateAnimation">
+                        <DoubleAnimation To="0" Duration="0:00:00" Storyboard.TargetName="showChargeTypeActionView" Storyboard.TargetProperty="Opacity" />
+                        <DoubleAnimation To="1" Duration="0:00:00" Storyboard.TargetName="showChargeTypeActionView" Storyboard.TargetProperty="Opacity" />
+                        <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="showChargeTypeActionView" Storyboard.TargetProperty="(UIElement.Visibility)">
+                            <DiscreteObjectKeyFrame KeyTime="00:00:00" Value="{x:Static Visibility.Visible}"/>
+                        </ObjectAnimationUsingKeyFrames>
+                    </Storyboard>
+                </VisualState>
+
+
+                <VisualState x:Name="ShowIrancellChargeTypeState">
+                    <Storyboard x:Name="ShowIrancellChargeTypeActionStateAnimation">
+                        <DoubleAnimation To="0" Duration="0:00:00" Storyboard.TargetName="showIrancellChargeTypeActionView" Storyboard.TargetProperty="Opacity" />
+                        <DoubleAnimation To="1" Duration="0:00:00" Storyboard.TargetName="showIrancellChargeTypeActionView" Storyboard.TargetProperty="Opacity" />
+                        <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="showIrancellChargeTypeActionView" Storyboard.TargetProperty="(UIElement.Visibility)">
+                            <DiscreteObjectKeyFrame KeyTime="00:00:00" Value="{x:Static Visibility.Visible}"/>
+                        </ObjectAnimationUsingKeyFrames>
+                    </Storyboard>
+                </VisualState>
+
+                <VisualState x:Name="ShowHamrahAvalChargeTypeState">
+                    <Storyboard x:Name="ShowHamrahAvalChargeTypeStateAnimation">
+                        <DoubleAnimation To="0" Duration="0:00:00" Storyboard.TargetName="showHamrahAvalChargeTypeActionView" Storyboard.TargetProperty="Opacity" />
+                        <DoubleAnimation To="1" Duration="0:00:00" Storyboard.TargetName="showHamrahAvalChargeTypeActionView" Storyboard.TargetProperty="Opacity" />
+                        <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="showHamrahAvalChargeTypeActionView" Storyboard.TargetProperty="(UIElement.Visibility)">
+                            <DiscreteObjectKeyFrame KeyTime="00:00:00" Value="{x:Static Visibility.Visible}"/>
+                        </ObjectAnimationUsingKeyFrames>
+                    </Storyboard>
+                </VisualState>
+
+                <VisualState x:Name="ShowTaliaChargeTypeState">
+                    <Storyboard x:Name="ShowTaliaChargeTypeStateAnimation">
+                        <DoubleAnimation To="0" Duration="0:00:00" Storyboard.TargetName="showTaliaChargeTypeActionView" Storyboard.TargetProperty="Opacity" />
+                        <DoubleAnimation To="1" Duration="0:00:00" Storyboard.TargetName="showTaliaChargeTypeActionView" Storyboard.TargetProperty="Opacity" />
+                        <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="showTaliaChargeTypeActionView" Storyboard.TargetProperty="(UIElement.Visibility)">
+                            <DiscreteObjectKeyFrame KeyTime="00:00:00" Value="{x:Static Visibility.Visible}"/>
+                        </ObjectAnimationUsingKeyFrames>
+                    </Storyboard>
+                </VisualState>
+
+                <VisualState x:Name="WaitingState">
+                    <Storyboard x:Name="WaitingStateAnimation">
+                        <DoubleAnimation To="0" Duration="0:00:00" Storyboard.TargetName="showWaitingActionView" Storyboard.TargetProperty="Opacity" />
+                        <DoubleAnimation To="1" Duration="0:00:00" Storyboard.TargetName="showWaitingActionView" Storyboard.TargetProperty="Opacity" />
+                        <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="showWaitingActionView" Storyboard.TargetProperty="(UIElement.Visibility)">
+                            <DiscreteObjectKeyFrame KeyTime="00:00:00" Value="{x:Static Visibility.Visible}"/>
+                        </ObjectAnimationUsingKeyFrames>
+                    </Storyboard>
+                </VisualState>
+
+                <VisualState x:Name="PrintState">
+                    <Storyboard x:Name="PrintStateAnimation">
+                        <DoubleAnimation To="0" Duration="0:00:00" Storyboard.TargetName="PrintActionView" Storyboard.TargetProperty="Opacity" />
+                        <DoubleAnimation To="1" Duration="0:00:00" Storyboard.TargetName="PrintActionView" Storyboard.TargetProperty="Opacity" />
+                        <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="PrintActionView" Storyboard.TargetProperty="(UIElement.Visibility)">
+                            <DiscreteObjectKeyFrame KeyTime="00:00:00" Value="{x:Static Visibility.Visible}"/>
+                        </ObjectAnimationUsingKeyFrames>
+                    </Storyboard>
+                </VisualState>
+
+                <VisualState x:Name="ShowPayBillState">
+                    <Storyboard x:Name="PayBillViewAnimation">
+                        <DoubleAnimation To="0" Duration="0:00:00" Storyboard.TargetName="PayBillView" Storyboard.TargetProperty="Opacity" />
+                        <DoubleAnimation To="1" Duration="0:00:00" Storyboard.TargetName="PayBillView" Storyboard.TargetProperty="Opacity" />
+                        <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="PayBillView" Storyboard.TargetProperty="(UIElement.Visibility)">
+                            <DiscreteObjectKeyFrame KeyTime="00:00:00" Value="{x:Static Visibility.Visible}"/>
+                        </ObjectAnimationUsingKeyFrames>
+                    </Storyboard>
+                </VisualState>
+
+                <VisualState x:Name="ShowJiringState">
+                    <Storyboard x:Name="PayJiringViewAnimation">
+                        <DoubleAnimation To="0" Duration="0:00:00" Storyboard.TargetName="PayJiringView" Storyboard.TargetProperty="Opacity" />
+                        <DoubleAnimation To="1" Duration="0:00:00" Storyboard.TargetName="PayJiringView" Storyboard.TargetProperty="Opacity" />
+                        <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="PayJiringView" Storyboard.TargetProperty="(UIElement.Visibility)">
+                            <DiscreteObjectKeyFrame KeyTime="00:00:00" Value="{x:Static Visibility.Visible}"/>
+                        </ObjectAnimationUsingKeyFrames>
+                    </Storyboard>
+                </VisualState>
+
+                <VisualState x:Name="ShowIrancellServicesState">
+                    <Storyboard x:Name="ShowIrancellServicesAnimation">
+                        <DoubleAnimation To="0" Duration="0:00:00" Storyboard.TargetName="ShowIrancellServicesView" Storyboard.TargetProperty="Opacity" />
+                        <DoubleAnimation To="1" Duration="0:00:00" Storyboard.TargetName="ShowIrancellServicesView" Storyboard.TargetProperty="Opacity" />
+                        <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="ShowIrancellServicesView" Storyboard.TargetProperty="(UIElement.Visibility)">
+                            <DiscreteObjectKeyFrame KeyTime="00:00:00" Value="{x:Static Visibility.Visible}"/>
+                        </ObjectAnimationUsingKeyFrames>
+                    </Storyboard>
+                </VisualState>
+
+                <VisualState x:Name="ShowIrancellServicePaymentState">
+                    <Storyboard x:Name="ShowIrancellServicePaymentAnimation">
+                        <DoubleAnimation To="0" Duration="0:00:00" Storyboard.TargetName="ShowIrancellServicePaymentView" Storyboard.TargetProperty="Opacity" />
+                        <DoubleAnimation To="1" Duration="0:00:00" Storyboard.TargetName="ShowIrancellServicePaymentView" Storyboard.TargetProperty="Opacity" />
+                        <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="ShowIrancellServicePaymentView" Storyboard.TargetProperty="(UIElement.Visibility)">
+                            <DiscreteObjectKeyFrame KeyTime="00:00:00" Value="{x:Static Visibility.Visible}"/>
+                        </ObjectAnimationUsingKeyFrames>
+                    </Storyboard>
+                </VisualState>
+                <VisualState x:Name="ShowMobinetPaymentState">
+                    <Storyboard x:Name="ShowMobinetPaymentAnimation">
+                        <DoubleAnimation To="0" Duration="0:00:00" Storyboard.TargetName="ShowMobinetPaymentView" Storyboard.TargetProperty="Opacity" />
+                        <DoubleAnimation To="1" Duration="0:00:00" Storyboard.TargetName="ShowMobinetPaymentView" Storyboard.TargetProperty="Opacity" />
+                        <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="ShowMobinetPaymentView" Storyboard.TargetProperty="(UIElement.Visibility)">
+                            <DiscreteObjectKeyFrame KeyTime="00:00:00" Value="{x:Static Visibility.Visible}"/>
+                        </ObjectAnimationUsingKeyFrames>
+                    </Storyboard>
+                </VisualState>
+
+                <VisualState x:Name="ShowHamrahAvalServicesState">
+                    <Storyboard x:Name="ShowHamrahAvalServicesAnimation">
+                        <DoubleAnimation To="0" Duration="0:00:00" Storyboard.TargetName="ShowHamrahAvalServicesView" Storyboard.TargetProperty="Opacity" />
+                        <DoubleAnimation To="1" Duration="0:00:00" Storyboard.TargetName="ShowHamrahAvalServicesView" Storyboard.TargetProperty="Opacity" />
+                        <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="ShowHamrahAvalServicesView" Storyboard.TargetProperty="(UIElement.Visibility)">
+                            <DiscreteObjectKeyFrame KeyTime="00:00:00" Value="{x:Static Visibility.Visible}"/>
+                        </ObjectAnimationUsingKeyFrames>
+                    </Storyboard>
+                </VisualState>
+
+                <VisualState x:Name="BusyState">
+                    <Storyboard x:Name="ShowBusyAnimation">
+                        <DoubleAnimation To="0" Duration="0:00:00" Storyboard.TargetName="ShowBusyView" Storyboard.TargetProperty="Opacity" />
+                        <DoubleAnimation To="1" Duration="0:00:00" Storyboard.TargetName="ShowBusyView" Storyboard.TargetProperty="Opacity" />
+                        <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="ShowBusyView" Storyboard.TargetProperty="(UIElement.Visibility)">
+                            <DiscreteObjectKeyFrame KeyTime="00:00:00" Value="{x:Static Visibility.Visible}"/>
+                        </ObjectAnimationUsingKeyFrames>
+                    </Storyboard>
+                </VisualState>
+
+                <VisualState x:Name="ShowHamrahAvalTopUpState">
+                    <Storyboard x:Name="PayHamrahAvalAnimation">
+                        <DoubleAnimation To="0" Duration="0:00:00" Storyboard.TargetName="PayHamrahAvalTopUpView" Storyboard.TargetProperty="Opacity" />
+                        <DoubleAnimation To="1" Duration="0:00:00" Storyboard.TargetName="PayHamrahAvalTopUpView" Storyboard.TargetProperty="Opacity" />
+                        <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="PayHamrahAvalTopUpView" Storyboard.TargetProperty="(UIElement.Visibility)">
+                            <DiscreteObjectKeyFrame KeyTime="00:00:00" Value="{x:Static Visibility.Visible}"/>
+                        </ObjectAnimationUsingKeyFrames>
+                    </Storyboard>
+                </VisualState>
+
+                <VisualState x:Name="ShowHamrahAvalBillState">
+                    <Storyboard x:Name="ShowHamrahAvalBillAnimation">
+                        <DoubleAnimation To="0" Duration="0:00:00" Storyboard.TargetName="ShowHamrahAvalBillView" Storyboard.TargetProperty="Opacity" />
+                        <DoubleAnimation To="1" Duration="0:00:00" Storyboard.TargetName="ShowHamrahAvalBillView" Storyboard.TargetProperty="Opacity" />
+                        <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="ShowHamrahAvalBillView" Storyboard.TargetProperty="(UIElement.Visibility)">
+                            <DiscreteObjectKeyFrame KeyTime="00:00:00" Value="{x:Static Visibility.Visible}"/>
+                        </ObjectAnimationUsingKeyFrames>
+                    </Storyboard>
+                </VisualState>
+
+                <VisualState x:Name="ShowHamrahAvalBillInfoState">
+                    <Storyboard x:Name="ShowHamrahAvalBillInfoViewAnimation">
+                        <DoubleAnimation To="0" Duration="0:00:00" Storyboard.TargetName="ShowHamrahAvalBillInfoView" Storyboard.TargetProperty="Opacity" />
+                        <DoubleAnimation To="1" Duration="0:00:00" Storyboard.TargetName="ShowHamrahAvalBillInfoView" Storyboard.TargetProperty="Opacity" />
+                        <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="ShowHamrahAvalBillInfoView" Storyboard.TargetProperty="(UIElement.Visibility)">
+                            <DiscreteObjectKeyFrame KeyTime="00:00:00" Value="{x:Static Visibility.Visible}"/>
+                        </ObjectAnimationUsingKeyFrames>
+                    </Storyboard>
+                </VisualState>
+
+                <VisualState x:Name="RestartState">
+                    <Storyboard x:Name="RestartViewAnimation">
+                        <DoubleAnimation To="0" Duration="0:00:00" Storyboard.TargetName="RestartView" Storyboard.TargetProperty="Opacity" />
+                        <DoubleAnimation To="1" Duration="0:00:00" Storyboard.TargetName="RestartView" Storyboard.TargetProperty="Opacity" />
+                        <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="RestartView" Storyboard.TargetProperty="(UIElement.Visibility)">
+                            <DiscreteObjectKeyFrame KeyTime="00:00:00" Value="{x:Static Visibility.Visible}"/>
+                        </ObjectAnimationUsingKeyFrames>
+                    </Storyboard>
+                </VisualState>
+
+                <VisualState x:Name="ShowRightelChargeTypeState">
+                    <Storyboard x:Name="ShowRightelChargeViewAnimation">
+                        <DoubleAnimation To="0" Duration="0:00:00" Storyboard.TargetName="RightelView" Storyboard.TargetProperty="Opacity" />
+                        <DoubleAnimation To="1" Duration="0:00:00" Storyboard.TargetName="RightelView" Storyboard.TargetProperty="Opacity" />
+                        <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="RightelView" Storyboard.TargetProperty="(UIElement.Visibility)">
+                            <DiscreteObjectKeyFrame KeyTime="00:00:00" Value="{x:Static Visibility.Visible}"/>
+                        </ObjectAnimationUsingKeyFrames>
+                    </Storyboard>
+                </VisualState>
+
+
+
+                <VisualState x:Name="WorkspaceState">
+                    <!--<Storyboard>
+                        <DoubleAnimation To="0" Duration="0:00:00.4" Storyboard.TargetName="loginView" Storyboard.TargetProperty="Opacity" />
+                        <DoubleAnimation To="1" Duration="0:00:00" Storyboard.TargetName="workspaceView" Storyboard.TargetProperty="Opacity" />
+                        <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="Opacity" Storyboard.TargetName="loginView">
+                            <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                            <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0"/>
+                        </DoubleAnimationUsingKeyFrames>
+                        <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="Opacity" Storyboard.TargetName="workspaceView">
+                            <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                            <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0"/>
+                        </DoubleAnimationUsingKeyFrames>
+                    </Storyboard>-->
+                    <Storyboard x:Name="WorkspaceStateAnimation">
+                        <DoubleAnimation To="0" Duration="0:00:00" Storyboard.TargetName="workspaceView" Storyboard.TargetProperty="Opacity" />
+                        <DoubleAnimation To="1" Duration="0:00:00" Storyboard.TargetName="workspaceView" Storyboard.TargetProperty="Opacity" />
+                        <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="workspaceView" Storyboard.TargetProperty="(UIElement.Visibility)">
+                            <DiscreteObjectKeyFrame KeyTime="00:00:00" Value="{x:Static Visibility.Visible}"/>
+                        </ObjectAnimationUsingKeyFrames>
+                    </Storyboard>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+        <vw:LoginView x:Name="loginView" Visibility="Hidden" Opacity="0"/>
+        <vw:WaitingView x:Name="waitingView" Visibility="Hidden" Opacity="0"/>
+        <vw:GetPin x:Name="getPinView" Visibility="Hidden" Opacity="0"/>
+        <vw:MainMenu x:Name="mainMenuView" Visibility="Hidden" Opacity="0"/>
+        <vw:GetBalanceInquiryAction x:Name="getBalanceInquiryActionView" Visibility="Hidden" Opacity="0"/>
+        <vw:GetChargeType x:Name="showChargeTypeActionView" Visibility="Hidden" Opacity="0"/>
+        <vw:GetIrancellChargeType x:Name="showIrancellChargeTypeActionView" Visibility="Hidden" Opacity="0"/>
+        <vw:GetHamrahavalChargeType x:Name="showHamrahAvalChargeTypeActionView" Visibility="Hidden" Opacity="0"/>
+        <vw:GetTaliaChargeType x:Name="showTaliaChargeTypeActionView" Visibility="Hidden" Opacity="0"/>
+        <vw:Error x:Name="showErrorActionView" Visibility="Hidden" Opacity="0"/>
+        <vw:Waiting x:Name="showWaitingActionView" Visibility="Hidden" Opacity="0"/>
+        <vw:Print x:Name="PrintActionView" Visibility="Hidden" Opacity="0"/>
+        <vw:PayBill x:Name="PayBillView" Visibility="Hidden" Opacity="0"/>
+        <vw:Jiring x:Name="PayJiringView" Visibility="Hidden" Opacity="0"/>
+        <vw:ShowIrancellServices x:Name="ShowIrancellServicesView" Visibility="Hidden" Opacity="0"/>
+        <vw:PayIrancellServices x:Name="ShowIrancellServicePaymentView" Visibility="Hidden" Opacity="0"/>
+        <vw:PayMobinet x:Name="ShowMobinetPaymentView"  Visibility="Hidden" Opacity="0"/>
+        <vw:ShowHamrahAvalServices x:Name="ShowHamrahAvalServicesView"  Visibility="Hidden" Opacity="0"/>
+        <vw:ShowBusy x:Name="ShowBusyView"  Visibility="Hidden" Opacity="0"/>
+        <vw:PayHamrahAvalTopUp x:Name="PayHamrahAvalTopUpView"  Visibility="Hidden" Opacity="0"/>
+        <vw:ShowHamrahAvalBill x:Name="ShowHamrahAvalBillView"  Visibility="Hidden" Opacity="0"/>
+        <vw:ShowHamrahAvalBillInfo x:Name="ShowHamrahAvalBillInfoView"  Visibility="Hidden" Opacity="0"/>
+        <vw:Restart x:Name="RestartView"  Visibility="Hidden" Opacity="0"/>
+        <vw:GetRightelChargeType x:Name="RightelView"  Visibility="Hidden" Opacity="0"/>
+        
+    </Grid>
+</UserControl>

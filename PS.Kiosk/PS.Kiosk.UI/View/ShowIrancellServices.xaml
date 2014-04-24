@@ -1,0 +1,96 @@
+﻿<UserControl x:Class="PS.Kiosk.UI.View.ShowIrancellServices"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="6*" />
+            <RowDefinition Height="24*" />
+            <RowDefinition Height="91*" />
+            <RowDefinition Height="19*" />
+            <RowDefinition Height="14*" />
+            <RowDefinition Height="18*" />
+            <RowDefinition Height="15*" />
+            <RowDefinition Height="17*" />
+            <RowDefinition Height="96*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="14*" />
+            <ColumnDefinition Width="34*" />
+            <ColumnDefinition Width="34*" />
+            <ColumnDefinition Width="38*" />
+            <ColumnDefinition Width="60*" />
+            <ColumnDefinition Width="17*" />
+            <ColumnDefinition Width="37*" />
+            <ColumnDefinition Width="66*" />
+        </Grid.ColumnDefinitions>
+        <Grid.Background >
+            <ImageBrush ImageSource="..\Resources\Irancell - Khadamat.jpg"></ImageBrush>
+        </Grid.Background>
+
+        <Button Name="BtnPayIrancellBill" Grid.Column="4" Grid.Row="5" Click="BtnPayIrancellBill_Click">
+            <Button.BorderBrush>
+                <SolidColorBrush />
+            </Button.BorderBrush>
+            <Button.Foreground>
+                <SolidColorBrush />
+            </Button.Foreground>
+            <Button.Background>
+                <SolidColorBrush/>
+            </Button.Background>
+        </Button>
+
+
+        <Button Content=""   HorizontalAlignment="Stretch"  Name="btnExit" VerticalAlignment="Stretch" Grid.Column="1"  Grid.Row="1" Click="btnExit_Click" >
+            <Button.Foreground>
+                <SolidColorBrush />
+            </Button.Foreground>
+            <Button.BorderBrush>
+                <SolidColorBrush />
+            </Button.BorderBrush>
+            <Button.Background>
+                <ImageBrush ImageSource="..\Resources\Payan.png"  Stretch="Fill"/>
+            </Button.Background>
+        </Button>
+
+        <Button Content=""   HorizontalAlignment="Stretch"  Name="btnReturn" VerticalAlignment="Stretch" Grid.Column="2"  Grid.Row="1" Click="btnReturn_Click">
+            <Button.Foreground>
+                <SolidColorBrush />
+            </Button.Foreground>
+            <Button.BorderBrush>
+                <SolidColorBrush />
+            </Button.BorderBrush>
+            <Button.Background>
+                <ImageBrush ImageSource="..\Resources\Bazgasht.png"  Stretch="Fill"/>
+            </Button.Background>
+        </Button>
+        <Button Name="BtnWimaxCharge" Grid.Column="4" Grid.Row="7" Click="BtnWimaxCharge_Click">
+            <Button.BorderBrush>
+                <SolidColorBrush />
+            </Button.BorderBrush>
+            <Button.Foreground>
+                <SolidColorBrush />
+            </Button.Foreground>
+            <Button.Background>
+                <SolidColorBrush/>
+            </Button.Background>
+        </Button>
+
+        <Button Name="BtnReCharge" Grid.Column="4" Grid.Row="3" Click="BtnReCharge_Click">
+            <Button.BorderBrush>
+                <SolidColorBrush />
+            </Button.BorderBrush>
+            <Button.Foreground>
+                <SolidColorBrush />
+            </Button.Foreground>
+            <Button.Background>
+                <SolidColorBrush/>
+            </Button.Background>
+        </Button>
+
+
+    </Grid>
+</UserControl>
